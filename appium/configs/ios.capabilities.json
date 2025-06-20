@@ -1,0 +1,6 @@
+{
+    "platformName": "iOS",
+    "deviceName": "iPhone 15",
+    "automationName": "XCUITest",
+    "app": "./resources/ipa/MyApp.app"
+  }

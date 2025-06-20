@@ -1,0 +1,6 @@
+{
+    "platformName": "Android",
+    "deviceName": "Android Emulator",
+    "automationName": "UiAutomator2",
+    "app": "./resources/apk/app-debug.apk"
+  }
