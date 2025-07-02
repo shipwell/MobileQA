@@ -8,66 +8,19 @@ This repository contains a mobile automation testing framework built with Webdri
 
 Before setting up the project, ensure you have the following installed:
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-- Java Development Kit (JDK 8 or higher)
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- Java Development Kit (JDK 11 or higher)
 - Android SDK (for Android testing)
   - Android SDK Platform-tools
   - Android Emulator
   - Android SDK Build-tools
 - Xcode (for iOS testing, macOS only)
-- Appium Doctor (optional, for environment validation)
+- Appium 2.x
 
-## Environment Setup
+## Quick Start
 
-### 1. Install Node.js and npm
-
-Download and install from [nodejs.org](https://nodejs.org/)
-
-### 2. Set up Android Environment
-
-1. Install Android Studio from [developer.android.com](https://developer.android.com/studio)
-2. Set up environment variables:
-
-```bash
-# Add these to your ~/.bash_profile or ~/.zshrc
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/emulator
-```
-
-3. Create an Android Virtual Device (AVD) with API level 31 (Android 12.0)
-
-### 3. Set up iOS Environment (macOS only)
-
-1. Install Xcode from the App Store
-2. Install Xcode Command Line Tools:
-
-```bash
-xcode-select --install
-```
-
-3. Install Carthage (dependency manager):
-
-```bash
-brew install carthage
-```
-
-### 4. Verify your setup with Appium Doctor
-
-```bash
-npm install -g @appium/doctor
-appium-doctor --android  # For Android
-appium-doctor --ios      # For iOS (macOS only)
-```
-
-Fix any issues reported by Appium Doctor before proceeding.
-
-## Project Setup
-
-1. Clone the repository:
+1. **Clone the repository**
 
 ```bash
 git clone <repository-url>

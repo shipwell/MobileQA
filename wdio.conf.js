@@ -5,7 +5,7 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    port: 4723,
+    port: 4724,
     //
     // ==================
     // Specify Test Files
@@ -51,14 +51,12 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2',
-        'appium:app': process.cwd() + '/apps/android-538.apk',
-        'appium:autoGrantPermissions': true
+        // capabilities for local Appium web tests on iOS
+        platformName: 'iOS',
+        browserName: 'Safari',
+        'appium:deviceName': 'iPhone Simulator',
+        'appium:platformVersion': '16.4',
+        'appium:automationName': 'XCUITest'
     }],
 
     //
@@ -108,13 +106,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [['appium', {
-        command: 'appium',
-        args: {
-            basePath: '/wd/hub',
-            logLevel: 'info'
-        }
-    }]],
+    services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

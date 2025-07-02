@@ -3,6 +3,7 @@ node_modules/
 npm-debug.log
 yarn-debug.log
 yarn-error.log
+package-lock.json
 
 # Environment variables
 .env
@@ -25,6 +26,7 @@ coverage/
 *.apk
 *.aab
 *.ipa
+*.app
 
 # IDE specific files
 .idea/
@@ -42,7 +44,16 @@ allure-results/
 allure-report/
 wdio-logs/
 wdio-*.log
+.screenshots/
 
 # Temporary files
 .tmp/
 temp/
+
+# Credentials and sensitive information
+*credentials*
+*secret*
+
+# Device farm specific
+test-results/
+report/
